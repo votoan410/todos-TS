@@ -16,8 +16,9 @@ export interface TodosAction {
 
 export interface TodosEdit {
     title: string
-    type: string,
-    payload: Todo
+    id: any,
+    completed: Boolean,
+    isEdit: boolean
 }
 
  

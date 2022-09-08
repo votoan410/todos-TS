@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTask, getTasks } from "../actions/todoActions";
-import { Todo } from "../types/types";
+import { Todo,TodosEdit } from "../types/types";
 
-const EditTask = ({ title, completed, id, isEdit }): any => {
+const EditTask = ({ title, completed, id, isEdit }: TodosEdit): any => {
   const [toggleEdit, setToggleEdit] = useState(isEdit);
 
   useEffect(() => {
@@ -32,12 +32,12 @@ const EditTask = ({ title, completed, id, isEdit }): any => {
   const styleLined = { textDecoration: "line-through", cursor: "grab" };
   const styleWOLined = { cursor: "grab" };
 
-  const markClick = (title, completed, id) => {
+  const markClick = ({title, completed, id} : any) => {
     const newTask = {
       title: title,
       completed: !completed,
     };
-    dispatch(updateTask(id, newTask));
+    dispatch(updateTask(id, newTask)) ;
   };
 
   const editSubmit = (id, newValue, completed) => {
