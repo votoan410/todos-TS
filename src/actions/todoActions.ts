@@ -5,7 +5,7 @@ import { Todo } from "../types/types";
 
   
 
-export const getTasks = () => async (dispatch : Promise<any>) => {
+export const getTasks = () => async (dispatch : any) => {
   try {
     const { data } : any= await api.fetchTask();
     // console.log("fetched data: ", data);

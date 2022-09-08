@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTask, getTasks, createTask } from "../actions/todoActions";
 
-const Header = () => {
+const Header = (): any=> {
   const [value, setValue] = useState("");
   const tasks = useSelector((state) => state.tasks);
   const dispatch = useDispatch();

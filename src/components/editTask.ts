@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateTask, getTasks } from "../actions/todoActions";
 import { Todo } from "../types/types";
 
-const EditTask = ({ title, completed, id, isEdit }) => {
+const EditTask = ({ title, completed, id, isEdit }): any => {
   const [toggleEdit, setToggleEdit] = useState(isEdit);
 
   useEffect(() => {
